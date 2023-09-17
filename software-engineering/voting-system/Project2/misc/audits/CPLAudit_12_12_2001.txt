@@ -1,0 +1,53 @@
+The election type is: CPL
+The number of parties are: 5
+Candidates for the Cool party are: CoolGuy
+Candidates for the Super cool party are: SuperCoolGuy
+Candidates for the Sorta cool party are: SortaCoolGuy
+Candidates for the Hyper cool party are: HyperCoolGuy
+Candidates for the Not cool party are: NotCoolGuy
+The number of seats are: 3 and the number of ballots are: 18.
+Ballot for Super cool
+Ballot for Sorta cool
+Ballot for Hyper cool
+Ballot for Not cool
+Ballot for Cool
+Ballot for Super cool
+Ballot for Sorta cool
+Ballot for Hyper cool
+Ballot for Not cool
+Ballot for Cool
+Ballot for Super cool
+Ballot for Sorta cool
+Ballot for Hyper cool
+Ballot for Not cool
+Ballot for Cool
+Ballot for Super cool
+Ballot for Sorta cool
+Ballot for Hyper cool
+Cool had 3 total votes.
+Super cool had 4 total votes.
+Sorta cool had 4 total votes.
+Hyper cool had 4 total votes.
+Not cool had 3 total votes.
+The quota was: 6.
+Cool received 3 votes and earned 0 seats.
+Super cool received 4 votes and earned 0 seats.
+Sorta cool received 4 votes and earned 0 seats.
+Hyper cool received 4 votes and earned 0 seats.
+Not cool received 3 votes and earned 0 seats.
+Tiebreaker chose the following winners: Hyper cool, Sorta cool, Super cool,
+Selected from the following parties: Sorta cool, Hyper cool, Super cool.
+Cool had 3 remainder votes and earned 0 more seats
+Super cool had 4 remainder votes and earned 1 more seats
+Sorta cool had 4 remainder votes and earned 1 more seats
+Hyper cool had 4 remainder votes and earned 1 more seats
+Not cool had 3 remainder votes and earned 0 more seats
+The final results were as follows: 
+Cool earned 0 seats.
+Super cool earned 1 seats.
+Their winners were: SuperCoolGuy
+Sorta cool earned 1 seats.
+Their winners were: SortaCoolGuy
+Hyper cool earned 1 seats.
+Their winners were: HyperCoolGuy
+Not cool earned 0 seats.

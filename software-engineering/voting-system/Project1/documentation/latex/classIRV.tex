@@ -1,0 +1,312 @@
+\hypertarget{classIRV}{}\doxysection{IRV Class Reference}
+\label{classIRV}\index{IRV@{IRV}}
+
+
+File name\+: \mbox{\hyperlink{IRV_8h_source}{IRV.\+h}}. Description\+: Contains method signatures and attributes for the \mbox{\hyperlink{classIRV}{IRV}} class, which carries out \mbox{\hyperlink{classIRV}{IRV}} processes. Author\+: Jacob.  
+
+
+
+
+{\ttfamily \#include $<$IRV.\+h$>$}
+
+
+
+Inheritance diagram for IRV\+:
+% FIG 0
+
+
+Collaboration diagram for IRV\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIRV_a09a459a75055282e8d17ce307cfe653e}\label{classIRV_a09a459a75055282e8d17ce307cfe653e}} 
+\mbox{\hyperlink{classIRV_a09a459a75055282e8d17ce307cfe653e}{$\sim$\+IRV}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classIRV}{IRV}}, necessary to prevent memory leaks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_aca5a19093774a46eb544317267e8b397}{calculate\+Winners}} () override
+\begin{DoxyCompactList}\small\item\em Determines the winner of the election. Makes calls to report results to audit and screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_a415e762831c530541ffbb7ae4a169b07}{redistribute}} (\mbox{\hyperlink{classCandidate}{Candidate}} loser, std\+::vector$<$ bool $>$ in\+Running, int n\+Loop)
+\begin{DoxyCompactList}\small\item\em Redistributes votes from the loser to the rest of the non-\/eliminated candidates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCandidate}{Candidate}} \mbox{\hyperlink{classIRV_a204f959eb32193637eea5a1aa995cc74}{get\+Loser}} (std\+::vector$<$ bool $>$ in\+Running)
+\begin{DoxyCompactList}\small\item\em Returns the candidate that is being eliminated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCandidate}{Candidate}} $\ast$ \mbox{\hyperlink{classIRV_a3cd1e60f39bcd46511bcdac4152eb742}{max\+Cand\+Win\+Check}} (std\+::vector$<$ bool $>$ in\+Running)
+\begin{DoxyCompactList}\small\item\em Finds the candidate with the most votes, and sees if they have a majority. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCandidate}{Candidate}} $\ast$ \mbox{\hyperlink{classIRV_a42d9aa5a2699ba0db7adb70e61f7eb9b}{get\+Winner\+Two\+Left}} (std\+::vector$<$ bool $>$ in\+Running)
+\begin{DoxyCompactList}\small\item\em Determines the winner when two candidates remain. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIRV_affa8d30acf98d87c79ab6affa80de40e}\label{classIRV_affa8d30acf98d87c79ab6affa80de40e}} 
+void \mbox{\hyperlink{classIRV_affa8d30acf98d87c79ab6affa80de40e}{fill\+First\+Place\+Votes}} ()
+\begin{DoxyCompactList}\small\item\em Looks through ballots and sets each candidate\textquotesingle{}s first place votes and working votes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_aef531770f089efc12e1ba4f9d6b37a8a}{print\+Results}} (\mbox{\hyperlink{classCandidate}{Candidate}} winner, int redists)
+\begin{DoxyCompactList}\small\item\em Prints the results of the \mbox{\hyperlink{classIRV}{IRV}} election to the terminal. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$ \mbox{\hyperlink{classIRV_a1a252b5c2105dedfa86c69bb5cafe18b}{get\+Candidates}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Candidates field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_a6b88d9e6622006711ff9b39b65d8253b}{set\+Candidates}} (std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$ candidate\+Array)
+\begin{DoxyCompactList}\small\item\em Sets the Candidates field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_ad481714f1255e88c512477e2ec7bc17b}{set\+Ballot\+List}} (std\+::vector$<$ \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} $>$ $\ast$linked\+List)
+\begin{DoxyCompactList}\small\item\em Sets the ballot\+List field. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} $>$ $\ast$ \mbox{\hyperlink{classIRV_a716837ec4f353f3cab22ef07f2965c8c}{get\+Ballot\+List}} ()
+\begin{DoxyCompactList}\small\item\em Returns the ballot\+List field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_a55667a33d069ba0f976a9b1fca59d922}{set\+Num\+Candidates}} (int sum)
+\begin{DoxyCompactList}\small\item\em Sets the num\+Candidates field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_aa616b823f3cb41d49f477d7abc06ede8}{set\+Remain\+Candidates}} (int new\+Remain\+Candidates)
+\begin{DoxyCompactList}\small\item\em Sets the remain\+Candiates field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRV_ac41e0a089dfeffc5206f50ef07f00f8f}{set\+Audit}} (\mbox{\hyperlink{classIRVAudit}{IRVAudit}} $\ast$aud)
+\begin{DoxyCompactList}\small\item\em Sets the audit field. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIRV_a7a4d93abeb32c1ae20f8d915411ff480}{get\+Remain\+Candidates}} ()
+\begin{DoxyCompactList}\small\item\em Gets the remain\+Candiates field. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIRV_a7b68f2b87444194362b6b64e3dc68577}{get\+Num\+Candidates}} ()
+\begin{DoxyCompactList}\small\item\em Returns the num\+Candidates field. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIRVAudit}{IRVAudit}} $\ast$ \mbox{\hyperlink{classIRV_ab89694d9339ae0faeb131e4afcfdb4ea}{get\+Audit}} ()
+\begin{DoxyCompactList}\small\item\em Returns the audit field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+File name\+: \mbox{\hyperlink{IRV_8h_source}{IRV.\+h}}. Description\+: Contains method signatures and attributes for the \mbox{\hyperlink{classIRV}{IRV}} class, which carries out \mbox{\hyperlink{classIRV}{IRV}} processes. Author\+: Jacob. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIRV_aca5a19093774a46eb544317267e8b397}\label{classIRV_aca5a19093774a46eb544317267e8b397}} 
+\index{IRV@{IRV}!calculateWinners@{calculateWinners}}
+\index{calculateWinners@{calculateWinners}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{calculateWinners()}{calculateWinners()}}
+{\footnotesize\ttfamily void IRV\+::calculate\+Winners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Determines the winner of the election. Makes calls to report results to audit and screen. 
+
+File name\+: IRV.\+cc. Description\+: Contains method definitons for the \mbox{\hyperlink{classIRV}{IRV}} class, which contains \mbox{\hyperlink{classIRV}{IRV}} processes. Author\+: Jacob. 
+
+Implements \mbox{\hyperlink{classElectionObject}{Election\+Object}}.
+
+\mbox{\Hypertarget{classIRV_ab89694d9339ae0faeb131e4afcfdb4ea}\label{classIRV_ab89694d9339ae0faeb131e4afcfdb4ea}} 
+\index{IRV@{IRV}!getAudit@{getAudit}}
+\index{getAudit@{getAudit}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getAudit()}{getAudit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIRVAudit}{IRVAudit}}$\ast$ IRV\+::get\+Audit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the audit field. 
+
+\begin{DoxyReturn}{Returns}
+The audit field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a716837ec4f353f3cab22ef07f2965c8c}\label{classIRV_a716837ec4f353f3cab22ef07f2965c8c}} 
+\index{IRV@{IRV}!getBallotList@{getBallotList}}
+\index{getBallotList@{getBallotList}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getBallotList()}{getBallotList()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} $>$ $\ast$ IRV\+::get\+Ballot\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the ballot\+List field. 
+
+\begin{DoxyReturn}{Returns}
+The ballot\+List field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a1a252b5c2105dedfa86c69bb5cafe18b}\label{classIRV_a1a252b5c2105dedfa86c69bb5cafe18b}} 
+\index{IRV@{IRV}!getCandidates@{getCandidates}}
+\index{getCandidates@{getCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getCandidates()}{getCandidates()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$ IRV\+::get\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Candidates field. 
+
+\begin{DoxyReturn}{Returns}
+The candidate vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a204f959eb32193637eea5a1aa995cc74}\label{classIRV_a204f959eb32193637eea5a1aa995cc74}} 
+\index{IRV@{IRV}!getLoser@{getLoser}}
+\index{getLoser@{getLoser}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getLoser()}{getLoser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCandidate}{Candidate}} IRV\+::get\+Loser (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$}]{in\+Running }\end{DoxyParamCaption})}
+
+
+
+Returns the candidate that is being eliminated. 
+
+\begin{DoxyReturn}{Returns}
+A candidate object; the candidate being eliminated 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a7b68f2b87444194362b6b64e3dc68577}\label{classIRV_a7b68f2b87444194362b6b64e3dc68577}} 
+\index{IRV@{IRV}!getNumCandidates@{getNumCandidates}}
+\index{getNumCandidates@{getNumCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getNumCandidates()}{getNumCandidates()}}
+{\footnotesize\ttfamily int IRV\+::get\+Num\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the num\+Candidates field. 
+
+\begin{DoxyReturn}{Returns}
+The num\+Candidates field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a7a4d93abeb32c1ae20f8d915411ff480}\label{classIRV_a7a4d93abeb32c1ae20f8d915411ff480}} 
+\index{IRV@{IRV}!getRemainCandidates@{getRemainCandidates}}
+\index{getRemainCandidates@{getRemainCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getRemainCandidates()}{getRemainCandidates()}}
+{\footnotesize\ttfamily int IRV\+::get\+Remain\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the remain\+Candiates field. 
+
+\begin{DoxyReturn}{Returns}
+The remain\+Candidates field. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a42d9aa5a2699ba0db7adb70e61f7eb9b}\label{classIRV_a42d9aa5a2699ba0db7adb70e61f7eb9b}} 
+\index{IRV@{IRV}!getWinnerTwoLeft@{getWinnerTwoLeft}}
+\index{getWinnerTwoLeft@{getWinnerTwoLeft}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{getWinnerTwoLeft()}{getWinnerTwoLeft()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCandidate}{Candidate}} $\ast$ IRV\+::get\+Winner\+Two\+Left (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$}]{in\+Running }\end{DoxyParamCaption})}
+
+
+
+Determines the winner when two candidates remain. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Running} & Boolean array, representing candidates still in the running. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the winning candidate object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_a3cd1e60f39bcd46511bcdac4152eb742}\label{classIRV_a3cd1e60f39bcd46511bcdac4152eb742}} 
+\index{IRV@{IRV}!maxCandWinCheck@{maxCandWinCheck}}
+\index{maxCandWinCheck@{maxCandWinCheck}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{maxCandWinCheck()}{maxCandWinCheck()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCandidate}{Candidate}} $\ast$ IRV\+::max\+Cand\+Win\+Check (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$}]{in\+Running }\end{DoxyParamCaption})}
+
+
+
+Finds the candidate with the most votes, and sees if they have a majority. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+Running} & Boolean array, representing candidates still in the running. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A null pointer if the max candidate did not have majority, and a pointer to the max candidate if they did. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIRV_aef531770f089efc12e1ba4f9d6b37a8a}\label{classIRV_aef531770f089efc12e1ba4f9d6b37a8a}} 
+\index{IRV@{IRV}!printResults@{printResults}}
+\index{printResults@{printResults}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{printResults()}{printResults()}}
+{\footnotesize\ttfamily void IRV\+::print\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCandidate}{Candidate}}}]{winner,  }\item[{int}]{redists }\end{DoxyParamCaption})}
+
+
+
+Prints the results of the \mbox{\hyperlink{classIRV}{IRV}} election to the terminal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & The candidate that won the election. \\
+\hline
+{\em redists} & The number of redistributions required to find the winner. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRV_a415e762831c530541ffbb7ae4a169b07}\label{classIRV_a415e762831c530541ffbb7ae4a169b07}} 
+\index{IRV@{IRV}!redistribute@{redistribute}}
+\index{redistribute@{redistribute}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{redistribute()}{redistribute()}}
+{\footnotesize\ttfamily void IRV\+::redistribute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCandidate}{Candidate}}}]{loser,  }\item[{std\+::vector$<$ bool $>$}]{in\+Running,  }\item[{int}]{n\+Loop }\end{DoxyParamCaption})}
+
+
+
+Redistributes votes from the loser to the rest of the non-\/eliminated candidates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em loser} & The candidate that is being eliminated \\
+\hline
+{\em in\+Running} & Boolean array, representing candidates still in the running. \\
+\hline
+{\em n\+Loop} & Number of redistribution we are on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRV_ac41e0a089dfeffc5206f50ef07f00f8f}\label{classIRV_ac41e0a089dfeffc5206f50ef07f00f8f}} 
+\index{IRV@{IRV}!setAudit@{setAudit}}
+\index{setAudit@{setAudit}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{setAudit()}{setAudit()}}
+{\footnotesize\ttfamily void IRV\+::set\+Audit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIRVAudit}{IRVAudit}} $\ast$}]{aud }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the audit field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aud} & the new audit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRV_ad481714f1255e88c512477e2ec7bc17b}\label{classIRV_ad481714f1255e88c512477e2ec7bc17b}} 
+\index{IRV@{IRV}!setBallotList@{setBallotList}}
+\index{setBallotList@{setBallotList}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{setBallotList()}{setBallotList()}}
+{\footnotesize\ttfamily void IRV\+::set\+Ballot\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} $>$ $\ast$}]{linked\+List }\end{DoxyParamCaption})}
+
+
+
+Sets the ballot\+List field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em linked\+List} & The ballot\+Linked\+List to set to the ballot\+List attribute. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRV_a6b88d9e6622006711ff9b39b65d8253b}\label{classIRV_a6b88d9e6622006711ff9b39b65d8253b}} 
+\index{IRV@{IRV}!setCandidates@{setCandidates}}
+\index{setCandidates@{setCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{setCandidates()}{setCandidates()}}
+{\footnotesize\ttfamily void IRV\+::set\+Candidates (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$}]{candidate\+Array }\end{DoxyParamCaption})}
+
+
+
+Sets the Candidates field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidate\+Array} & The vector containing candidate objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRV_a55667a33d069ba0f976a9b1fca59d922}\label{classIRV_a55667a33d069ba0f976a9b1fca59d922}} 
+\index{IRV@{IRV}!setNumCandidates@{setNumCandidates}}
+\index{setNumCandidates@{setNumCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{setNumCandidates()}{setNumCandidates()}}
+{\footnotesize\ttfamily void IRV\+::set\+Num\+Candidates (\begin{DoxyParamCaption}\item[{int}]{sum }\end{DoxyParamCaption})}
+
+
+
+Sets the num\+Candidates field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sum} & The num\+Candidates. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRV_aa616b823f3cb41d49f477d7abc06ede8}\label{classIRV_aa616b823f3cb41d49f477d7abc06ede8}} 
+\index{IRV@{IRV}!setRemainCandidates@{setRemainCandidates}}
+\index{setRemainCandidates@{setRemainCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{setRemainCandidates()}{setRemainCandidates()}}
+{\footnotesize\ttfamily void IRV\+::set\+Remain\+Candidates (\begin{DoxyParamCaption}\item[{int}]{new\+Remain\+Candidates }\end{DoxyParamCaption})}
+
+
+
+Sets the remain\+Candiates field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Remain\+Candidates} & the new field value for remain\+Candidates. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/IRV.\+h\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/IRV.\+cc\end{DoxyCompactItemize}

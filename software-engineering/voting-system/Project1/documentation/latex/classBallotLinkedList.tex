@@ -1,0 +1,114 @@
+\hypertarget{classBallotLinkedList}{}\doxysection{Ballot\+Linked\+List Class Reference}
+\label{classBallotLinkedList}\index{BallotLinkedList@{BallotLinkedList}}
+
+
+File name\+: \mbox{\hyperlink{BallotLinkedList_8h_source}{Ballot\+Linked\+List.\+h}}. Description\+: Contains method signatures and attributes for the \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} class, which is a linked list data structure involved in IR voting. Author\+: Jacob.  
+
+
+
+
+{\ttfamily \#include $<$Ballot\+Linked\+List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBallotLinkedList_aa6651f0b583547e3f488267470c3d7dc}\label{classBallotLinkedList_aa6651f0b583547e3f488267470c3d7dc}} 
+\mbox{\hyperlink{classBallotLinkedList_aa6651f0b583547e3f488267470c3d7dc}{Ballot\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em File name\+: Ballot\+Linked\+List.\+cc. Description\+: Contains method definitions for the \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} class, which is a linked list data structure involved in IR voting. Author\+: Jacob. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBallotLinkedList_aa5afed3d6ed28ddf691a909d608c0371}\label{classBallotLinkedList_aa5afed3d6ed28ddf691a909d608c0371}} 
+void \mbox{\hyperlink{classBallotLinkedList_aa5afed3d6ed28ddf691a909d608c0371}{remove\+Head}} ()
+\begin{DoxyCompactList}\small\item\em This function will remove the node currently add the head of the linked list and make the next node the head (if there is one). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBallotLinkedList_a849dd92b9403bf0af609abc255a17745}{append\+Node}} (int candidate)
+\begin{DoxyCompactList}\small\item\em This function will add a new node containing the given integer to the end of the linked list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBallotLinkedList_aa31e38ba8a942e90c3d88697dc09cfa1}{get\+Head}} ()
+\begin{DoxyCompactList}\small\item\em This will return the number that is stored in the head node of the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBallotLinkedList_aa2b3936500f25029a778a69b4f851c38}{populate\+List}} (std\+::vector$<$ int $>$ votes)
+\begin{DoxyCompactList}\small\item\em This will create a linked list from an integer array. The head node will hold the first array entry and so on. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBallotLinkedList_af2a722fa09adc81a23329cedd3d03698}\label{classBallotLinkedList_af2a722fa09adc81a23329cedd3d03698}} 
+void \mbox{\hyperlink{classBallotLinkedList_af2a722fa09adc81a23329cedd3d03698}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em This will free all of the nodes in the linked list. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBallotLinkedList_acbd900119574c92f695f322902fe0e68}{get\+Length}} ()
+\begin{DoxyCompactList}\small\item\em This returns the length attribute. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBallotNode}{Ballot\+Node}} $\ast$ \mbox{\hyperlink{classBallotLinkedList_ad597d6ac57b04bbecc1a03696431f09b}{get\+Tail}} ()
+\begin{DoxyCompactList}\small\item\em This returns a pointer to the tail node. Used for testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File name\+: \mbox{\hyperlink{BallotLinkedList_8h_source}{Ballot\+Linked\+List.\+h}}. Description\+: Contains method signatures and attributes for the \mbox{\hyperlink{classBallotLinkedList}{Ballot\+Linked\+List}} class, which is a linked list data structure involved in IR voting. Author\+: Jacob. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBallotLinkedList_a849dd92b9403bf0af609abc255a17745}\label{classBallotLinkedList_a849dd92b9403bf0af609abc255a17745}} 
+\index{BallotLinkedList@{BallotLinkedList}!appendNode@{appendNode}}
+\index{appendNode@{appendNode}!BallotLinkedList@{BallotLinkedList}}
+\doxysubsubsection{\texorpdfstring{appendNode()}{appendNode()}}
+{\footnotesize\ttfamily void Ballot\+Linked\+List\+::append\+Node (\begin{DoxyParamCaption}\item[{int}]{candidate }\end{DoxyParamCaption})}
+
+
+
+This function will add a new node containing the given integer to the end of the linked list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidate} & The index of the candidate in the \mbox{\hyperlink{classCandidate}{Candidate}} array. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBallotLinkedList_aa31e38ba8a942e90c3d88697dc09cfa1}\label{classBallotLinkedList_aa31e38ba8a942e90c3d88697dc09cfa1}} 
+\index{BallotLinkedList@{BallotLinkedList}!getHead@{getHead}}
+\index{getHead@{getHead}!BallotLinkedList@{BallotLinkedList}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily int Ballot\+Linked\+List\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This will return the number that is stored in the head node of the linked list. 
+
+\begin{DoxyReturn}{Returns}
+The index that is held in the head of the linked list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBallotLinkedList_acbd900119574c92f695f322902fe0e68}\label{classBallotLinkedList_acbd900119574c92f695f322902fe0e68}} 
+\index{BallotLinkedList@{BallotLinkedList}!getLength@{getLength}}
+\index{getLength@{getLength}!BallotLinkedList@{BallotLinkedList}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily int Ballot\+Linked\+List\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This returns the length attribute. 
+
+\begin{DoxyReturn}{Returns}
+The length of the linked list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBallotLinkedList_ad597d6ac57b04bbecc1a03696431f09b}\label{classBallotLinkedList_ad597d6ac57b04bbecc1a03696431f09b}} 
+\index{BallotLinkedList@{BallotLinkedList}!getTail@{getTail}}
+\index{getTail@{getTail}!BallotLinkedList@{BallotLinkedList}}
+\doxysubsubsection{\texorpdfstring{getTail()}{getTail()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBallotNode}{Ballot\+Node}} $\ast$ Ballot\+Linked\+List\+::get\+Tail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This returns a pointer to the tail node. Used for testing. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the tail node. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBallotLinkedList_aa2b3936500f25029a778a69b4f851c38}\label{classBallotLinkedList_aa2b3936500f25029a778a69b4f851c38}} 
+\index{BallotLinkedList@{BallotLinkedList}!populateList@{populateList}}
+\index{populateList@{populateList}!BallotLinkedList@{BallotLinkedList}}
+\doxysubsubsection{\texorpdfstring{populateList()}{populateList()}}
+{\footnotesize\ttfamily void Ballot\+Linked\+List\+::populate\+List (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{votes }\end{DoxyParamCaption})}
+
+
+
+This will create a linked list from an integer array. The head node will hold the first array entry and so on. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em votes} & An integer array that represents the indices of the nodes in the list. This array is in the same order as the list should be. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/Ballot\+Linked\+List.\+h\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/Ballot\+Linked\+List.\+cc\end{DoxyCompactItemize}

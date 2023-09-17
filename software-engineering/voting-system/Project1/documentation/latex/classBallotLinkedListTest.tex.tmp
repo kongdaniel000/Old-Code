@@ -1,0 +1,24 @@
+\hypertarget{classBallotLinkedListTest}{}\doxysection{Ballot\+Linked\+List\+Test Class Reference}
+\label{classBallotLinkedListTest}\index{BallotLinkedListTest@{BallotLinkedListTest}}
+
+
+Inheritance diagram for Ballot\+Linked\+List\+Test\+:
+% FIG 0
+
+
+Collaboration diagram for Ballot\+Linked\+List\+Test\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBallotLinkedListTest_a873c3df07fa6405b4ab8bc614b22ad02}\label{classBallotLinkedListTest_a873c3df07fa6405b4ab8bc614b22ad02}} 
+void {\bfseries Set\+Up} ()
+\item 
+\mbox{\Hypertarget{classBallotLinkedListTest_a80f131cb53374d9df23833f0a55794cb}\label{classBallotLinkedListTest_a80f131cb53374d9df23833f0a55794cb}} 
+void {\bfseries Tear\+Down} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/testing/Ballot\+Linked\+List\+\_\+unittest.\+cc\end{DoxyCompactItemize}

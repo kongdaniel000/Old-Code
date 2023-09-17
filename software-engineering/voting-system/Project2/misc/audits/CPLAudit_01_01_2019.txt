@@ -1,0 +1,49 @@
+The election type is: CPL
+The number of parties are: 6
+Candidates for the Democratic party are: Foster, Volz, Pike
+Candidates for the Republican party are: Green, Xu, Wang
+Candidates for the New Wave party are: Jacks, Rosen
+Candidates for the Reform party are: McClure, Berg
+Candidates for the Green party are: Zheng, Melvin
+Candidates for the Independent party are: Peters
+The number of seats are: 3 and the number of ballots are: 9.
+Ballot for Democratic
+Ballot for Democratic
+Ballot for Republican
+Ballot for Green
+Ballot for Independent
+Ballot for Reform
+Ballot for Reform
+Ballot for Democratic
+Ballot for Republican
+Democratic had 3 total votes.
+Republican had 2 total votes.
+New Wave had 0 total votes.
+Reform had 2 total votes.
+Green had 1 total votes.
+Independent had 1 total votes.
+The quota was: 3.
+Democratic received 3 votes and earned 1 seats.
+Republican received 2 votes and earned 0 seats.
+New Wave received 0 votes and earned 0 seats.
+Reform received 2 votes and earned 0 seats.
+Green received 1 votes and earned 0 seats.
+Independent received 1 votes and earned 0 seats.
+Tiebreaker chose the following winners: Reform, Republican,
+Selected from the following parties: Reform, Republican.
+Democratic had 0 remainder votes and earned 0 more seats
+Republican had 2 remainder votes and earned 1 more seats
+New Wave had 0 remainder votes and earned 0 more seats
+Reform had 2 remainder votes and earned 1 more seats
+Green had 1 remainder votes and earned 0 more seats
+Independent had 1 remainder votes and earned 0 more seats
+The final results were as follows: 
+Democratic earned 1 seats.
+Their winners were: Foster
+Republican earned 1 seats.
+Their winners were: Green
+New Wave earned 0 seats.
+Reform earned 1 seats.
+Their winners were: McClure
+Green earned 0 seats.
+Independent earned 0 seats.

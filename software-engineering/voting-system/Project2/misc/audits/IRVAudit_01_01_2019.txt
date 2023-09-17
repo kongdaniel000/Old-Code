@@ -1,0 +1,37 @@
+The election type is: IRV
+The number of candidates are: 4
+Candidate 1 is Rosen (D)
+Candidate 2 is Kleinberg (R)
+Candidate 3 is Chou (I)
+Candidate 4 is Royce (L)
+The number of ballots are: 6.
+Ballot data: 
+Voted for Rosen (D) as their 1 choice.
+Voted for Royce (L) as their 2 choice.
+Voted for Kleinberg (R) as their 3 choice.
+Voted for Chou (I) as their 4 choice.
+Ballot data: 
+Voted for Rosen (D) as their 1 choice.
+Voted for Chou (I) as their 2 choice.
+Ballot data: 
+Voted for Rosen (D) as their 1 choice.
+Voted for Kleinberg (R) as their 2 choice.
+Voted for Chou (I) as their 3 choice.
+Ballot data: 
+Voted for Chou (I) as their 1 choice.
+Voted for Kleinberg (R) as their 2 choice.
+Voted for Rosen (D) as their 3 choice.
+Voted for Royce (L) as their 4 choice.
+Ballot data: 
+Voted for Chou (I) as their 1 choice.
+Voted for Royce (L) as their 2 choice.
+Ballot data: 
+Voted for Royce (L) as their 1 choice.
+Kleinberg (R) was eliminated and their votes distributed
+Rosen (D) had 0 votes distributed to them
+Chou (I) had 0 votes distributed to them
+Royce (L) had 0 votes distributed to them
+Royce (L) was eliminated and their votes distributed
+Rosen (D) had 0 votes distributed to them
+Chou (I) had 0 votes distributed to them
+The final results have Rosen (D) as the winning candidate with a vote majority of 0.6

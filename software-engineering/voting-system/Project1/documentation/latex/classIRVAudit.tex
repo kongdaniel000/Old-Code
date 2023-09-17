@@ -1,0 +1,153 @@
+\hypertarget{classIRVAudit}{}\doxysection{IRVAudit Class Reference}
+\label{classIRVAudit}\index{IRVAudit@{IRVAudit}}
+
+
+File name\+: \mbox{\hyperlink{IRVAudit_8h_source}{IRVAudit.\+h}}. Description\+: Contains method signatures for the \mbox{\hyperlink{classIRVAudit}{IRVAudit}} class, which defines the creation and writing to of the \mbox{\hyperlink{classIRV}{IRV}} Audit file by inheriting from the \mbox{\hyperlink{classElectionAudit}{Election\+Audit}} class. Author\+: Caleb Otto.  
+
+
+
+
+{\ttfamily \#include $<$IRVAudit.\+h$>$}
+
+
+
+Inheritance diagram for IRVAudit\+:
+% FIG 0
+
+
+Collaboration diagram for IRVAudit\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classIRVAudit_acf1ec68e415636c6c47be5251c17495f}{write\+Metadata}} (\mbox{\hyperlink{classIRV}{IRV}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em The overwritten function for writing the Metadata of the audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRVAudit_a616458942e710f738b049925ac7de29e}{write\+Final\+Results}} (\mbox{\hyperlink{classCandidate}{Candidate}} winner, float percentage)
+\begin{DoxyCompactList}\small\item\em Writes the final results to the audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRVAudit_a7ff15d45316d3ceb53dae7b4bd1932bb}{write\+Ballot}} (std\+::vector$<$ int $>$ votes, std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$ candidates)
+\begin{DoxyCompactList}\small\item\em Writes candidates that someone voted for in a ballot in their ranking. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRVAudit_a125735ac8648465747964d51f94b00e6}{write\+Vote\+Transfer}} (std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$ candidates, std\+::vector$<$ bool $>$ running, \mbox{\hyperlink{classCandidate}{Candidate}} eliminated, int redist)
+\begin{DoxyCompactList}\small\item\em Writes how the votes were redistributed in the election. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRVAudit_a489cb92444ce9829e9c7a956ae31d2f1}{write\+Tie\+Lead}} (std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$ original, \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$winner)
+\begin{DoxyCompactList}\small\item\em Writes the candidates who were tied for winning and who won. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIRVAudit_a952172d96e290c80289f3ad779c8344a}{write\+Tie\+Lose}} (std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$ original, \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$winner)
+\begin{DoxyCompactList}\small\item\em Writes the candidates who were tied for losing and who won/who was eliminated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+File name\+: \mbox{\hyperlink{IRVAudit_8h_source}{IRVAudit.\+h}}. Description\+: Contains method signatures for the \mbox{\hyperlink{classIRVAudit}{IRVAudit}} class, which defines the creation and writing to of the \mbox{\hyperlink{classIRV}{IRV}} Audit file by inheriting from the \mbox{\hyperlink{classElectionAudit}{Election\+Audit}} class. Author\+: Caleb Otto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIRVAudit_a7ff15d45316d3ceb53dae7b4bd1932bb}\label{classIRVAudit_a7ff15d45316d3ceb53dae7b4bd1932bb}} 
+\index{IRVAudit@{IRVAudit}!writeBallot@{writeBallot}}
+\index{writeBallot@{writeBallot}!IRVAudit@{IRVAudit}}
+\doxysubsubsection{\texorpdfstring{writeBallot()}{writeBallot()}}
+{\footnotesize\ttfamily void IRVAudit\+::write\+Ballot (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{votes,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$}]{candidates }\end{DoxyParamCaption})}
+
+
+
+Writes candidates that someone voted for in a ballot in their ranking. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em votes} & the ranking of votes \\
+\hline
+{\em candidates} & the vector of candidates in the election \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRVAudit_a616458942e710f738b049925ac7de29e}\label{classIRVAudit_a616458942e710f738b049925ac7de29e}} 
+\index{IRVAudit@{IRVAudit}!writeFinalResults@{writeFinalResults}}
+\index{writeFinalResults@{writeFinalResults}!IRVAudit@{IRVAudit}}
+\doxysubsubsection{\texorpdfstring{writeFinalResults()}{writeFinalResults()}}
+{\footnotesize\ttfamily void IRVAudit\+::write\+Final\+Results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCandidate}{Candidate}}}]{winner,  }\item[{float}]{percentage }\end{DoxyParamCaption})}
+
+
+
+Writes the final results to the audit file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em winner} & the winner of the election \\
+\hline
+{\em percentage} & the percentage they won with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRVAudit_acf1ec68e415636c6c47be5251c17495f}\label{classIRVAudit_acf1ec68e415636c6c47be5251c17495f}} 
+\index{IRVAudit@{IRVAudit}!writeMetadata@{writeMetadata}}
+\index{writeMetadata@{writeMetadata}!IRVAudit@{IRVAudit}}
+\doxysubsubsection{\texorpdfstring{writeMetadata()}{writeMetadata()}}
+{\footnotesize\ttfamily void IRVAudit\+::write\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIRV}{IRV}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+The overwritten function for writing the Metadata of the audit file. 
+
+File name\+: IRVAudit.\+cpp. Description\+: Contains method definitions for the \mbox{\hyperlink{classIRVAudit}{IRVAudit}} class, which defines the creation and writing to of the \mbox{\hyperlink{classIRV}{IRV}} Audit file by inheriting from the \mbox{\hyperlink{classElectionAudit}{Election\+Audit}} class. Author\+: Caleb Otto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & the \mbox{\hyperlink{classCPL}{CPL}} election object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRVAudit_a489cb92444ce9829e9c7a956ae31d2f1}\label{classIRVAudit_a489cb92444ce9829e9c7a956ae31d2f1}} 
+\index{IRVAudit@{IRVAudit}!writeTieLead@{writeTieLead}}
+\index{writeTieLead@{writeTieLead}!IRVAudit@{IRVAudit}}
+\doxysubsubsection{\texorpdfstring{writeTieLead()}{writeTieLead()}}
+{\footnotesize\ttfamily void IRVAudit\+::write\+Tie\+Lead (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$}]{original,  }\item[{\mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$}]{winner }\end{DoxyParamCaption})}
+
+
+
+Writes the candidates who were tied for winning and who won. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the original vector of candidates before tiebreak \\
+\hline
+{\em winner} & the winner of the tie breaker for lead \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRVAudit_a952172d96e290c80289f3ad779c8344a}\label{classIRVAudit_a952172d96e290c80289f3ad779c8344a}} 
+\index{IRVAudit@{IRVAudit}!writeTieLose@{writeTieLose}}
+\index{writeTieLose@{writeTieLose}!IRVAudit@{IRVAudit}}
+\doxysubsubsection{\texorpdfstring{writeTieLose()}{writeTieLose()}}
+{\footnotesize\ttfamily void IRVAudit\+::write\+Tie\+Lose (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$}]{original,  }\item[{\mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$}]{winner }\end{DoxyParamCaption})}
+
+
+
+Writes the candidates who were tied for losing and who won/who was eliminated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the original vector of candidates before tiebreak \\
+\hline
+{\em winner} & the winner of the tie breaker for least number of votes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classIRVAudit_a125735ac8648465747964d51f94b00e6}\label{classIRVAudit_a125735ac8648465747964d51f94b00e6}} 
+\index{IRVAudit@{IRVAudit}!writeVoteTransfer@{writeVoteTransfer}}
+\index{writeVoteTransfer@{writeVoteTransfer}!IRVAudit@{IRVAudit}}
+\doxysubsubsection{\texorpdfstring{writeVoteTransfer()}{writeVoteTransfer()}}
+{\footnotesize\ttfamily void IRVAudit\+::write\+Vote\+Transfer (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classCandidate}{Candidate}} $>$}]{candidates,  }\item[{std\+::vector$<$ bool $>$}]{running,  }\item[{\mbox{\hyperlink{classCandidate}{Candidate}}}]{eliminated,  }\item[{int}]{redist }\end{DoxyParamCaption})}
+
+
+
+Writes how the votes were redistributed in the election. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em candidates} & the vector of candidates in the election \\
+\hline
+{\em running} & the vector of booleans indicating which candidates are still in the running \\
+\hline
+{\em eliminated} & the vector of candidates who were eliminated \\
+\hline
+{\em redist} & the number of redistribution that we are on \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/IRVAudit.\+h\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/IRVAudit.\+cc\end{DoxyCompactItemize}

@@ -1,0 +1,182 @@
+\hypertarget{classCPLAudit}{}\doxysection{CPLAudit Class Reference}
+\label{classCPLAudit}\index{CPLAudit@{CPLAudit}}
+
+
+File name\+: \mbox{\hyperlink{CPLAudit_8h_source}{CPLAudit.\+h}}. Description\+: Contains method signatures for the \mbox{\hyperlink{classCPLAudit}{CPLAudit}} class, which defines the creation and writing to of the \mbox{\hyperlink{classCPL}{CPL}} Audit file by inheriting from the \mbox{\hyperlink{classElectionAudit}{Election\+Audit}} class. Author\+: Caleb Otto.  
+
+
+
+
+{\ttfamily \#include $<$CPLAudit.\+h$>$}
+
+
+
+Inheritance diagram for CPLAudit\+:
+% FIG 0
+
+
+Collaboration diagram for CPLAudit\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCPLAudit_a112816be6f341a8e82e3123d0a21b304}{write\+Metadata}} (\mbox{\hyperlink{classCPL}{CPL}} $\ast$object)
+\begin{DoxyCompactList}\small\item\em The overwritten function for writing the Metadata of the audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_af1856a0fe5785a2a6e8d29cc0627fb9c}{write\+Initial\+Votes}} (std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$ parties)
+\begin{DoxyCompactList}\small\item\em Writes the initial vote counts for all parties to the file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_a01394a955f40765e22a1a29844117369}{write\+Final\+Results}} (std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$ parties)
+\begin{DoxyCompactList}\small\item\em Writes the final results of how many seats each party won. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_a4c3fc221803372b6d32ab53fac51a540}{write\+First\+Allocation}} (std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$ parties, int quota)
+\begin{DoxyCompactList}\small\item\em Writes how many seats were given to each party in the first allocations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_a1ea9fdc0224863ecd54b2b0252acf6fc}{write\+Second\+Allocation}} (std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$ parties)
+\begin{DoxyCompactList}\small\item\em Writes how many seats were given to each party in the second allocation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_a1b7d00424cba4e935550d2e22a4b4771}{write\+Lottery}} (\mbox{\hyperlink{classParty}{Party}} source, \mbox{\hyperlink{classParty}{Party}} destination)
+\begin{DoxyCompactList}\small\item\em Writes if there was a seat lottery and it\textquotesingle{}s outcome. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_a9f451dff3d37b5f63b5571744f4d1e20}{write\+Ballot}} (\mbox{\hyperlink{classParty}{Party}} party)
+\begin{DoxyCompactList}\small\item\em Writes to which party the ballot voted for. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPLAudit_a1a138f4f36bfd116e705b62392494b52}{write\+Tiebreaker}} (std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$ original, std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$ winners)
+\begin{DoxyCompactList}\small\item\em Writes if there was a tiebreaker as well as it\textquotesingle{}s details. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCPLAudit_a4fae1b00ecebb2590e81f6a3401e35d1}\label{classCPLAudit_a4fae1b00ecebb2590e81f6a3401e35d1}} 
+void {\bfseries write\+Quota} (int quota)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+File name\+: \mbox{\hyperlink{CPLAudit_8h_source}{CPLAudit.\+h}}. Description\+: Contains method signatures for the \mbox{\hyperlink{classCPLAudit}{CPLAudit}} class, which defines the creation and writing to of the \mbox{\hyperlink{classCPL}{CPL}} Audit file by inheriting from the \mbox{\hyperlink{classElectionAudit}{Election\+Audit}} class. Author\+: Caleb Otto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCPLAudit_a9f451dff3d37b5f63b5571744f4d1e20}\label{classCPLAudit_a9f451dff3d37b5f63b5571744f4d1e20}} 
+\index{CPLAudit@{CPLAudit}!writeBallot@{writeBallot}}
+\index{writeBallot@{writeBallot}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeBallot()}{writeBallot()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Ballot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classParty}{Party}}}]{party }\end{DoxyParamCaption})}
+
+
+
+Writes to which party the ballot voted for. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em party} & the party the ballot is voting for \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_a01394a955f40765e22a1a29844117369}\label{classCPLAudit_a01394a955f40765e22a1a29844117369}} 
+\index{CPLAudit@{CPLAudit}!writeFinalResults@{writeFinalResults}}
+\index{writeFinalResults@{writeFinalResults}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeFinalResults()}{writeFinalResults()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Final\+Results (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$}]{parties }\end{DoxyParamCaption})}
+
+
+
+Writes the final results of how many seats each party won. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parties} & the vector containing all the parties in the election \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_a4c3fc221803372b6d32ab53fac51a540}\label{classCPLAudit_a4c3fc221803372b6d32ab53fac51a540}} 
+\index{CPLAudit@{CPLAudit}!writeFirstAllocation@{writeFirstAllocation}}
+\index{writeFirstAllocation@{writeFirstAllocation}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeFirstAllocation()}{writeFirstAllocation()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+First\+Allocation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$}]{parties,  }\item[{int}]{quota }\end{DoxyParamCaption})}
+
+
+
+Writes how many seats were given to each party in the first allocations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parties} & the vector containing all the parties in the election \\
+\hline
+{\em quota} & the number of seats available in the election \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_af1856a0fe5785a2a6e8d29cc0627fb9c}\label{classCPLAudit_af1856a0fe5785a2a6e8d29cc0627fb9c}} 
+\index{CPLAudit@{CPLAudit}!writeInitialVotes@{writeInitialVotes}}
+\index{writeInitialVotes@{writeInitialVotes}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeInitialVotes()}{writeInitialVotes()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Initial\+Votes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$}]{parties }\end{DoxyParamCaption})}
+
+
+
+Writes the initial vote counts for all parties to the file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parties} & the vector containing all the parties in the election \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_a1b7d00424cba4e935550d2e22a4b4771}\label{classCPLAudit_a1b7d00424cba4e935550d2e22a4b4771}} 
+\index{CPLAudit@{CPLAudit}!writeLottery@{writeLottery}}
+\index{writeLottery@{writeLottery}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeLottery()}{writeLottery()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Lottery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classParty}{Party}}}]{source,  }\item[{\mbox{\hyperlink{classParty}{Party}}}]{destination }\end{DoxyParamCaption})}
+
+
+
+Writes if there was a seat lottery and it\textquotesingle{}s outcome. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & whichever party had excess seats \\
+\hline
+{\em destination} & the party that won the excess seats \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_a112816be6f341a8e82e3123d0a21b304}\label{classCPLAudit_a112816be6f341a8e82e3123d0a21b304}} 
+\index{CPLAudit@{CPLAudit}!writeMetadata@{writeMetadata}}
+\index{writeMetadata@{writeMetadata}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeMetadata()}{writeMetadata()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Metadata (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCPL}{CPL}} $\ast$}]{object }\end{DoxyParamCaption})}
+
+
+
+The overwritten function for writing the Metadata of the audit file. 
+
+$\ast$audit\+File name\+: CPLAudit.\+cpp. Description\+: Contains method definitions for the \mbox{\hyperlink{classCPLAudit}{CPLAudit}} class, which defines the creation and writing to of the \mbox{\hyperlink{classCPL}{CPL}} Audit $\ast$audit\+File by inheriting from the \mbox{\hyperlink{classElectionAudit}{Election\+Audit}} class. Author\+: Caleb Otto.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & the \mbox{\hyperlink{classCPL}{CPL}} election object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_a1ea9fdc0224863ecd54b2b0252acf6fc}\label{classCPLAudit_a1ea9fdc0224863ecd54b2b0252acf6fc}} 
+\index{CPLAudit@{CPLAudit}!writeSecondAllocation@{writeSecondAllocation}}
+\index{writeSecondAllocation@{writeSecondAllocation}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeSecondAllocation()}{writeSecondAllocation()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Second\+Allocation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$}]{parties }\end{DoxyParamCaption})}
+
+
+
+Writes how many seats were given to each party in the second allocation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parties} & the vector containing all the parties in the election \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPLAudit_a1a138f4f36bfd116e705b62392494b52}\label{classCPLAudit_a1a138f4f36bfd116e705b62392494b52}} 
+\index{CPLAudit@{CPLAudit}!writeTiebreaker@{writeTiebreaker}}
+\index{writeTiebreaker@{writeTiebreaker}!CPLAudit@{CPLAudit}}
+\doxysubsubsection{\texorpdfstring{writeTiebreaker()}{writeTiebreaker()}}
+{\footnotesize\ttfamily void CPLAudit\+::write\+Tiebreaker (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$}]{original,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classElectionEntity}{Election\+Entity}} $\ast$ $>$}]{winners }\end{DoxyParamCaption})}
+
+
+
+Writes if there was a tiebreaker as well as it\textquotesingle{}s details. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & the original vector of parties before tiebreaker \\
+\hline
+{\em winners} & the winner vector of parties following the tiebreaker \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/CPLAudit.\+h\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/CPLAudit.\+cc\end{DoxyCompactItemize}

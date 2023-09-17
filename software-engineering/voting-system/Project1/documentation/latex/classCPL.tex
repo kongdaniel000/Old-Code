@@ -1,0 +1,221 @@
+\hypertarget{classCPL}{}\doxysection{CPL Class Reference}
+\label{classCPL}\index{CPL@{CPL}}
+
+
+Inheritance diagram for CPL\+:
+% FIG 0
+
+
+Collaboration diagram for CPL\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCPL_abbbcdafee9b1a5951730494fd3595439}\label{classCPL_abbbcdafee9b1a5951730494fd3595439}} 
+\mbox{\hyperlink{classCPL_abbbcdafee9b1a5951730494fd3595439}{$\sim$\+CPL}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classCPL}{CPL}}, necessary to prevent memory leaks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_aacb7f6d96b02d82add50114dda4902c4}{seat\+Lottery}} (std\+::vector$<$ bool $>$ $\ast$allowed, \mbox{\hyperlink{classParty}{Party}} source, int extra\+Seats, bool is\+Random=true)
+\begin{DoxyCompactList}\small\item\em Lotteries seats from a party that has too many. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_ad1016c23128d4e94cb10395f9bbcae27}{first\+Allocation}} (std\+::vector$<$ bool $>$ $\ast$allowed, int quota)
+\begin{DoxyCompactList}\small\item\em Does the first round of allocation of \mbox{\hyperlink{classCPL}{CPL}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_aab64e5c855273ce14b454f5bc352514b}{second\+Allocation}} (std\+::vector$<$ bool $>$ $\ast$allowed, bool is\+Random=true)
+\begin{DoxyCompactList}\small\item\em Does the second round of allocation of \mbox{\hyperlink{classIRV}{IRV}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCPL_a85c0e12500cff635a08b189a49c95251}\label{classCPL_a85c0e12500cff635a08b189a49c95251}} 
+void \mbox{\hyperlink{classCPL_a85c0e12500cff635a08b189a49c95251}{print\+Results}} ()
+\begin{DoxyCompactList}\small\item\em Prints the results of the \mbox{\hyperlink{classCPL}{CPL}} election to the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCPL_abf9cf6b59d9484e5e5a5a37bf5288188}\label{classCPL_abf9cf6b59d9484e5e5a5a37bf5288188}} 
+void \mbox{\hyperlink{classCPL_abf9cf6b59d9484e5e5a5a37bf5288188}{calculate\+Winners}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the who gets how many seats for the \mbox{\hyperlink{classCPL}{CPL}} election, then prints results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_a0516a2b13f737a331205885b824be689}{set\+Num\+Parties}} (int num)
+\begin{DoxyCompactList}\small\item\em Set num\+Parties. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_a3e8e355da388e236f49263f1101c5180}{set\+Parties}} (std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$ party\+Array)
+\begin{DoxyCompactList}\small\item\em Set the parties object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_abf571aacfd5e8e428e2dc6c4cd23cb09}{set\+Seats}} (int num)
+\begin{DoxyCompactList}\small\item\em Set seats. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCPL_ae9b0740c60b45ea63360400801ffe774}{set\+Audit}} (\mbox{\hyperlink{classCPLAudit}{CPLAudit}} $\ast$aud)
+\begin{DoxyCompactList}\small\item\em Set the audit object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCPL_aba92ab8150789dfc42c8796a293c2457}{get\+Num\+Parties}} ()
+\begin{DoxyCompactList}\small\item\em Get the num\+Parties. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$ \mbox{\hyperlink{classCPL_a3721ba9a4635996dc738732d4dc4b2d5}{get\+Parties}} ()
+\begin{DoxyCompactList}\small\item\em Get the parties object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCPL_abdc3d703cd2cd98bf73c5fdcf11d7ca9}{get\+Seats}} ()
+\begin{DoxyCompactList}\small\item\em Get the number of total seats. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCPLAudit}{CPLAudit}} $\ast$ \mbox{\hyperlink{classCPL_a5861df67eb90a5aea7ae78159229a41a}{get\+Audit}} ()
+\begin{DoxyCompactList}\small\item\em Get the audit object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCPL_ad1016c23128d4e94cb10395f9bbcae27}\label{classCPL_ad1016c23128d4e94cb10395f9bbcae27}} 
+\index{CPL@{CPL}!firstAllocation@{firstAllocation}}
+\index{firstAllocation@{firstAllocation}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{firstAllocation()}{firstAllocation()}}
+{\footnotesize\ttfamily void CPL\+::first\+Allocation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$ $\ast$}]{allowed,  }\item[{int}]{quota }\end{DoxyParamCaption})}
+
+
+
+Does the first round of allocation of \mbox{\hyperlink{classCPL}{CPL}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allowed} & A vector representing if a party is allowed to have anymore seats \\
+\hline
+{\em quota} & The quota for \mbox{\hyperlink{classCPL}{CPL}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPL_a5861df67eb90a5aea7ae78159229a41a}\label{classCPL_a5861df67eb90a5aea7ae78159229a41a}} 
+\index{CPL@{CPL}!getAudit@{getAudit}}
+\index{getAudit@{getAudit}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{getAudit()}{getAudit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCPLAudit}{CPLAudit}}$\ast$ CPL\+::get\+Audit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the audit object. 
+
+\begin{DoxyReturn}{Returns}
+the \mbox{\hyperlink{classCPLAudit}{CPLAudit}} pointer. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCPL_aba92ab8150789dfc42c8796a293c2457}\label{classCPL_aba92ab8150789dfc42c8796a293c2457}} 
+\index{CPL@{CPL}!getNumParties@{getNumParties}}
+\index{getNumParties@{getNumParties}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{getNumParties()}{getNumParties()}}
+{\footnotesize\ttfamily int CPL\+::get\+Num\+Parties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the num\+Parties. 
+
+\begin{DoxyReturn}{Returns}
+the number of parties. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCPL_a3721ba9a4635996dc738732d4dc4b2d5}\label{classCPL_a3721ba9a4635996dc738732d4dc4b2d5}} 
+\index{CPL@{CPL}!getParties@{getParties}}
+\index{getParties@{getParties}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{getParties()}{getParties()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classParty}{Party}}$>$ CPL\+::get\+Parties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the parties object. 
+
+\begin{DoxyReturn}{Returns}
+the parties vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCPL_abdc3d703cd2cd98bf73c5fdcf11d7ca9}\label{classCPL_abdc3d703cd2cd98bf73c5fdcf11d7ca9}} 
+\index{CPL@{CPL}!getSeats@{getSeats}}
+\index{getSeats@{getSeats}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{getSeats()}{getSeats()}}
+{\footnotesize\ttfamily int CPL\+::get\+Seats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the number of total seats. 
+
+\begin{DoxyReturn}{Returns}
+the total seats. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCPL_aacb7f6d96b02d82add50114dda4902c4}\label{classCPL_aacb7f6d96b02d82add50114dda4902c4}} 
+\index{CPL@{CPL}!seatLottery@{seatLottery}}
+\index{seatLottery@{seatLottery}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{seatLottery()}{seatLottery()}}
+{\footnotesize\ttfamily void CPL\+::seat\+Lottery (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$ $\ast$}]{allowed,  }\item[{\mbox{\hyperlink{classParty}{Party}}}]{source,  }\item[{int}]{extra\+Seats,  }\item[{bool}]{is\+Random = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Lotteries seats from a party that has too many. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allowed} & The allowed parties to receive a seat \\
+\hline
+{\em source} & The party the seats are coming from \\
+\hline
+{\em extra\+Seats} & How many seats are being lotteried \\
+\hline
+{\em is\+Random} & If the lottery is random or deterministic, defaults to true. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPL_aab64e5c855273ce14b454f5bc352514b}\label{classCPL_aab64e5c855273ce14b454f5bc352514b}} 
+\index{CPL@{CPL}!secondAllocation@{secondAllocation}}
+\index{secondAllocation@{secondAllocation}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{secondAllocation()}{secondAllocation()}}
+{\footnotesize\ttfamily void CPL\+::second\+Allocation (\begin{DoxyParamCaption}\item[{std\+::vector$<$ bool $>$ $\ast$}]{allowed,  }\item[{bool}]{is\+Random = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Does the second round of allocation of \mbox{\hyperlink{classIRV}{IRV}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em allowed} & A vector representing if a party is allowed to have anymore seats \\
+\hline
+{\em is\+Random} & If the lottery inside the second round is random or deterministic, defaults to true. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPL_ae9b0740c60b45ea63360400801ffe774}\label{classCPL_ae9b0740c60b45ea63360400801ffe774}} 
+\index{CPL@{CPL}!setAudit@{setAudit}}
+\index{setAudit@{setAudit}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{setAudit()}{setAudit()}}
+{\footnotesize\ttfamily void CPL\+::set\+Audit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCPLAudit}{CPLAudit}} $\ast$}]{aud }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the audit object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aud} & Pointer to set the audit to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPL_a0516a2b13f737a331205885b824be689}\label{classCPL_a0516a2b13f737a331205885b824be689}} 
+\index{CPL@{CPL}!setNumParties@{setNumParties}}
+\index{setNumParties@{setNumParties}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{setNumParties()}{setNumParties()}}
+{\footnotesize\ttfamily void CPL\+::set\+Num\+Parties (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set num\+Parties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Value to set num\+Parties to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPL_a3e8e355da388e236f49263f1101c5180}\label{classCPL_a3e8e355da388e236f49263f1101c5180}} 
+\index{CPL@{CPL}!setParties@{setParties}}
+\index{setParties@{setParties}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{setParties()}{setParties()}}
+{\footnotesize\ttfamily void CPL\+::set\+Parties (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classParty}{Party}} $>$}]{party\+Array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set the parties object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em party\+Array} & \mbox{\hyperlink{classParty}{Party}} vector to set parties to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCPL_abf571aacfd5e8e428e2dc6c4cd23cb09}\label{classCPL_abf571aacfd5e8e428e2dc6c4cd23cb09}} 
+\index{CPL@{CPL}!setSeats@{setSeats}}
+\index{setSeats@{setSeats}!CPL@{CPL}}
+\doxysubsubsection{\texorpdfstring{setSeats()}{setSeats()}}
+{\footnotesize\ttfamily void CPL\+::set\+Seats (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set seats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Value to set seats to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/CPL.\+h\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/CPL.\+cc\end{DoxyCompactItemize}

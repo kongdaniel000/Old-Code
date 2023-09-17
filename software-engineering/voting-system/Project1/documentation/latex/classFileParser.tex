@@ -1,0 +1,201 @@
+\hypertarget{classFileParser}{}\doxysection{File\+Parser Class Reference}
+\label{classFileParser}\index{FileParser@{FileParser}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFileParser_a8b41aca52b30e9f357f50e76f3c9cc9d}\label{classFileParser_a8b41aca52b30e9f357f50e76f3c9cc9d}} 
+\mbox{\hyperlink{classFileParser_a8b41aca52b30e9f357f50e76f3c9cc9d}{$\sim$\+File\+Parser}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classFileParser}{File\+Parser}}, but close the file before destroying. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFileParser_ab0fc7010c27891ed65ce63f2b966b732}{open\+File}} (std\+::string filename)
+\begin{DoxyCompactList}\small\item\em Opens a file with the given name in \mbox{\hyperlink{classFileParser}{File\+Parser}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classFileParser_ae1c4f6fe9cb6ee466eb7a27536911abb}{ballot\+To\+Array}} (std\+::string ballot, int num\+Candidates)
+\begin{DoxyCompactList}\small\item\em Converts ballot string to an array to be used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFileParser_afc860cc5455c4472960bff8547ad5965}{read\+Ballots}} (\mbox{\hyperlink{classCPL}{CPL}} $\ast$election)
+\begin{DoxyCompactList}\small\item\em Read the ballots into a \mbox{\hyperlink{classCPL}{CPL}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFileParser_a3bc9d4b0ca2603a758d421505c9f2599}{read\+Ballots}} (\mbox{\hyperlink{classIRV}{IRV}} $\ast$election)
+\begin{DoxyCompactList}\small\item\em Read the ballots into a \mbox{\hyperlink{classIRV}{IRV}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFileParser_abce7574b5bc4127b9fbdd2aaf2ecbcd9}{get\+Day}} ()
+\begin{DoxyCompactList}\small\item\em Get the day from the user. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFileParser_a0ef5d9c03732ac189c39b713c6cb9adf}{get\+Month}} ()
+\begin{DoxyCompactList}\small\item\em Get the month from the user. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFileParser_a7dbdb892febdb8ac8b5d2590c170982d}{get\+Year}} ()
+\begin{DoxyCompactList}\small\item\em Get the year from the user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIRV}{IRV}} $\ast$ \mbox{\hyperlink{classFileParser_a3ee31bb9e3f18c60ec885d04ea8d84a9}{handle\+IRV}} (std\+::string day, std\+::string month, std\+::string year)
+\begin{DoxyCompactList}\small\item\em Handles a \mbox{\hyperlink{classIRV}{IRV}} election. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCPL}{CPL}} $\ast$ \mbox{\hyperlink{classFileParser_aac147732ac3ee92c049dbc54a8208bee}{handle\+CPL}} (std\+::string day, std\+::string month, std\+::string year)
+\begin{DoxyCompactList}\small\item\em Handles a \mbox{\hyperlink{classCPL}{CPL}} election. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classElectionObject}{Election\+Object}} $\ast$ \mbox{\hyperlink{classFileParser_ac794ccbba83246bf785ee877bc50c9ca}{get\+Metadata}} ()
+\begin{DoxyCompactList}\small\item\em Gets the metadata for the election. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFileParser_ae1c4f6fe9cb6ee466eb7a27536911abb}\label{classFileParser_ae1c4f6fe9cb6ee466eb7a27536911abb}} 
+\index{FileParser@{FileParser}!ballotToArray@{ballotToArray}}
+\index{ballotToArray@{ballotToArray}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{ballotToArray()}{ballotToArray()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ File\+Parser\+::ballot\+To\+Array (\begin{DoxyParamCaption}\item[{std\+::string}]{ballot,  }\item[{int}]{num\+Candidates }\end{DoxyParamCaption})}
+
+
+
+Converts ballot string to an array to be used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ballot} & Ballot string to convert. \\
+\hline
+{\em num\+Candidates} & Number of candidates in the \mbox{\hyperlink{classIRV}{IRV}} election. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector representation of the ballot string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_abce7574b5bc4127b9fbdd2aaf2ecbcd9}\label{classFileParser_abce7574b5bc4127b9fbdd2aaf2ecbcd9}} 
+\index{FileParser@{FileParser}!getDay@{getDay}}
+\index{getDay@{getDay}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{getDay()}{getDay()}}
+{\footnotesize\ttfamily std\+::string File\+Parser\+::get\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the day from the user. 
+
+\begin{DoxyReturn}{Returns}
+a string representation of the day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_ac794ccbba83246bf785ee877bc50c9ca}\label{classFileParser_ac794ccbba83246bf785ee877bc50c9ca}} 
+\index{FileParser@{FileParser}!getMetadata@{getMetadata}}
+\index{getMetadata@{getMetadata}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{getMetadata()}{getMetadata()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classElectionObject}{Election\+Object}} $\ast$ File\+Parser\+::get\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the metadata for the election. 
+
+\begin{DoxyReturn}{Returns}
+an election object that hasn\textquotesingle{}t calculated the winners yet. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_a0ef5d9c03732ac189c39b713c6cb9adf}\label{classFileParser_a0ef5d9c03732ac189c39b713c6cb9adf}} 
+\index{FileParser@{FileParser}!getMonth@{getMonth}}
+\index{getMonth@{getMonth}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{getMonth()}{getMonth()}}
+{\footnotesize\ttfamily std\+::string File\+Parser\+::get\+Month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the month from the user. 
+
+\begin{DoxyReturn}{Returns}
+a string representation of the month 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_a7dbdb892febdb8ac8b5d2590c170982d}\label{classFileParser_a7dbdb892febdb8ac8b5d2590c170982d}} 
+\index{FileParser@{FileParser}!getYear@{getYear}}
+\index{getYear@{getYear}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily std\+::string File\+Parser\+::get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get the year from the user. 
+
+\begin{DoxyReturn}{Returns}
+a string representation of the year 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_aac147732ac3ee92c049dbc54a8208bee}\label{classFileParser_aac147732ac3ee92c049dbc54a8208bee}} 
+\index{FileParser@{FileParser}!handleCPL@{handleCPL}}
+\index{handleCPL@{handleCPL}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{handleCPL()}{handleCPL()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCPL}{CPL}} $\ast$ File\+Parser\+::handle\+CPL (\begin{DoxyParamCaption}\item[{std\+::string}]{day,  }\item[{std\+::string}]{month,  }\item[{std\+::string}]{year }\end{DoxyParamCaption})}
+
+
+
+Handles a \mbox{\hyperlink{classCPL}{CPL}} election. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & Day from the user. \\
+\hline
+{\em month} & Month from the user. \\
+\hline
+{\em year} & Year from the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an \mbox{\hyperlink{classCPL}{CPL}} object that represents the calculated winners of the election. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_a3ee31bb9e3f18c60ec885d04ea8d84a9}\label{classFileParser_a3ee31bb9e3f18c60ec885d04ea8d84a9}} 
+\index{FileParser@{FileParser}!handleIRV@{handleIRV}}
+\index{handleIRV@{handleIRV}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{handleIRV()}{handleIRV()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classIRV}{IRV}} $\ast$ File\+Parser\+::handle\+IRV (\begin{DoxyParamCaption}\item[{std\+::string}]{day,  }\item[{std\+::string}]{month,  }\item[{std\+::string}]{year }\end{DoxyParamCaption})}
+
+
+
+Handles a \mbox{\hyperlink{classIRV}{IRV}} election. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em day} & Day from the user. \\
+\hline
+{\em month} & Month from the user. \\
+\hline
+{\em year} & Year from the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to an \mbox{\hyperlink{classIRV}{IRV}} object that represents the calculated winners of the election. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_ab0fc7010c27891ed65ce63f2b966b732}\label{classFileParser_ab0fc7010c27891ed65ce63f2b966b732}} 
+\index{FileParser@{FileParser}!openFile@{openFile}}
+\index{openFile@{openFile}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{openFile()}{openFile()}}
+{\footnotesize\ttfamily int File\+Parser\+::open\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Opens a file with the given name in \mbox{\hyperlink{classFileParser}{File\+Parser}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & File to open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 if success, 1 if fail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFileParser_afc860cc5455c4472960bff8547ad5965}\label{classFileParser_afc860cc5455c4472960bff8547ad5965}} 
+\index{FileParser@{FileParser}!readBallots@{readBallots}}
+\index{readBallots@{readBallots}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{readBallots()}{readBallots()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void File\+Parser\+::read\+Ballots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCPL}{CPL}} $\ast$}]{election }\end{DoxyParamCaption})}
+
+
+
+Read the ballots into a \mbox{\hyperlink{classCPL}{CPL}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em election} & Pointer to a \mbox{\hyperlink{classCPL}{CPL}} object to read ballots into. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFileParser_a3bc9d4b0ca2603a758d421505c9f2599}\label{classFileParser_a3bc9d4b0ca2603a758d421505c9f2599}} 
+\index{FileParser@{FileParser}!readBallots@{readBallots}}
+\index{readBallots@{readBallots}!FileParser@{FileParser}}
+\doxysubsubsection{\texorpdfstring{readBallots()}{readBallots()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void File\+Parser\+::read\+Ballots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classIRV}{IRV}} $\ast$}]{election }\end{DoxyParamCaption})}
+
+
+
+Read the ballots into a \mbox{\hyperlink{classIRV}{IRV}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em election} & Pointer to a \mbox{\hyperlink{classIRV}{IRV}} object to read ballots into. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/File\+Parser.\+h\item 
+/home/dan/\+Classes/\+CSCI5801/repo-\/\+Team10/\+Project1/src/File\+Parser.\+cc\end{DoxyCompactItemize}
